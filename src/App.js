@@ -278,10 +278,10 @@ const App = () => {
           <TransferListFirst />
           <TransferListSecond />
           <Selects />
+          <TextFields />
           <MuiBreadcrumbs />
           <BottomNavigation />
           <TemporaryDrawer />
-          <TextFields />
           <BottomNav />
         </div>
       </ThemeProvider>

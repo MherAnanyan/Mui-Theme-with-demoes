@@ -1,52 +1,65 @@
 import {
   FormControl,
   FormHelperText,
-  IconButton,
   InputAdornment,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
   TextField,
-} from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import * as React from 'react';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { Wrapper } from '../Wrapper';
+} from "@mui/material"
+import VisibilityIcon from "@mui/icons-material/Visibility"
+import * as React from "react"
+import { Visibility, VisibilityOff } from "@mui/icons-material"
+import { Wrapper } from "../Wrapper"
 
 export const TextFields = () => {
   const [values, setValues] = React.useState({
-    amount: '',
-    password: '',
-    weight: '',
-    weightRange: '',
+    amount: "",
+    password: "",
+    weight: "",
+    weightRange: "",
     showPassword: false,
-  });
+  })
 
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+    setValues({ ...values, [prop]: event.target.value })
+  }
 
   const handleClickShowPassword = () => {
     setValues({
       ...values,
       showPassword: !values.showPassword,
-    });
-  };
+    })
+  }
 
   const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-  const sx = { m: 1, minWidth: 220 };
+    event.preventDefault()
+  }
+  const sx = { m: 1, minWidth: 220 }
   return (
     <Wrapper title="TextFields">
       <br />
       <br />
 
-      <TextField sx={sx} label="Label" variant="standard" />
-      <TextField sx={sx} label="Label" variant="standard" focused />
-      <TextField sx={sx} label="Label" variant="standard" error />
-      <TextField sx={sx} label="Label" variant="standard" disabled />
+      <TextField sx={sx} label="Label" variant="standard" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="standard"
+        color="primary2"
+        focused
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="standard"
+        color="primary2"
+        error
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="standard"
+        color="primary2"
+        disabled
+      />
 
       <br />
       <br />
@@ -55,30 +68,45 @@ export const TextFields = () => {
         sx={sx}
         label="Label"
         variant="standard"
+        color="primary2"
         defaultValue="Value"
       />
 
       <br />
       <br />
 
-      <TextField sx={sx} label="Label" variant="standard" />
+      <TextField sx={sx} label="Medium" variant="standard" color="primary2" />
       <TextField
         sx={sx}
-        label="Label"
+        label="Small"
         variant="standard"
+        color="primary2"
         size="small"
       />
 
       <br />
       <br />
 
-      <FormControl sx={sx} variant="standard">
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="standard"
+        color="primary2"
+        InputProps={{
+          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+        }}
+      />
+
+      {/* <br />
+      <br /> */}
+
+      {/* <FormControl sx={sx} variant="standard" color="primary2">
         <InputLabel>Password</InputLabel>
         <OutlinedInput
           label="Password"
-          type={values.showPassword ? 'text' : 'password'}
+          type={values.showPassword ? "text" : "password"}
           value={values.password}
-          onChange={handleChange('password')}
+          onChange={handleChange("password")}
           endAdornment={
             <InputAdornment position="end">
               <IconButton
@@ -86,177 +114,183 @@ export const TextFields = () => {
                 onMouseDown={handleMouseDownPassword}
                 edge="end"
               >
-                {values.showPassword ? (
-                  <VisibilityOff />
-                ) : (
-                  <Visibility />
-                )}
+                {values.showPassword ? <VisibilityOff /> : <Visibility />}
               </IconButton>
             </InputAdornment>
           }
         />
-      </FormControl>
-
-      <FormControl sx={sx}>
-        <InputLabel variant="standard">Label</InputLabel>
-        <Select variant="standard" color="primary2" defaultValue={1}>
-          <MenuItem value={1}>
-            <VisibilityIcon />
-          </MenuItem>
-        </Select>
-      </FormControl>
+      </FormControl> */}
 
       <br />
       <br />
 
-      <FormControl sx={sx}>
-        <InputLabel variant="standard">Label</InputLabel>
-        <Select variant="standard" color="primary2">
-          <MenuItem value={1}>Value</MenuItem>
-        </Select>
-        <FormHelperText variant="standart">
+      <FormControl>
+        <TextField
+          sx={{ ml: 1, mt: 1, minWidth: 220 }}
+          label="Label"
+          variant="standard"
+          color="primary2"
+          defaultValue="Value"
+        />
+        <FormHelperText sx={{ ml: 1 }} variant="standard">
           Helper text
         </FormHelperText>
       </FormControl>
 
       <br />
       <br />
+      
+<TextField sx={sx} label="Label" variant="outlined" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+        focused
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+        error
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+        disabled
+      />
 
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select
+      <br />
+      <br />
+
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+        defaultValue="Value"
+      />
+
+      <br />
+      <br />
+
+      <TextField sx={sx} label="Medium" variant="outlined" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Small"
+        variant="outlined"
+        color="primary2"
+        size="small"
+      />
+
+      <br />
+      <br />
+
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+        InputProps={{
+          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+        }}
+      />
+
+      <br />
+      <br />
+
+      <FormControl variant="outlined" sx={sx}>
+        <TextField
+          label="Label"
           variant="outlined"
           color="primary2"
-          // defaultOpen
-          focus
-        ></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" error></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" disabled></Select>
+          defaultValue="Value"
+        />
+        <FormHelperText>
+          Helper text
+        </FormHelperText>
       </FormControl>
 
-      <br />
-      <br />
-
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" defaultValue={1}>
-          <MenuItem value={1}>Value</MenuItem>
-        </Select>
-      </FormControl>
 
       <br />
       <br />
 
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
-      </FormControl>
-      <FormControl sx={sx} size="small">
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
-      </FormControl>
+      <TextField sx={sx} label="Label" variant="filled" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+        focused
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+        error
+      />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+        disabled
+      />
 
       <br />
       <br />
 
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" defaultValue={1}>
-          <MenuItem value={1}>
-            <VisibilityIcon />
-          </MenuItem>
-        </Select>
-      </FormControl>
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+        defaultValue="Value"
+      />
 
       <br />
       <br />
 
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2">
-          <MenuItem value={1}>Value</MenuItem>
-        </Select>
-        <FormHelperText>Helper text</FormHelperText>
-      </FormControl>
+      <TextField sx={sx} label="Medium" variant="filled" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Small"
+        variant="filled"
+        color="primary2"
+        size="small"
+      />
 
       <br />
       <br />
 
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2"></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+        InputProps={{
+          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+        }}
+      />
+
+      <br />
+      <br />
+
+      <FormControl variant="filled" sx={sx}>
+        <TextField
+          label="Label"
           variant="filled"
           color="primary2"
-          // defaultOpen
-        ></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2" error></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2" disabled></Select>
-      </FormControl>
-
-      <br />
-      <br />
-
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2" defaultValue={1}>
-          <MenuItem value={1}>Value</MenuItem>
-        </Select>
-      </FormControl>
-
-      <br />
-      <br />
-
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2"></Select>
-      </FormControl>
-      <FormControl sx={sx} size="small">
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2"></Select>
-      </FormControl>
-
-      <br />
-      <br />
-
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2" defaultValue={1}>
-          <MenuItem value={1}>
-            <VisibilityIcon />
-          </MenuItem>
-        </Select>
-      </FormControl>
-
-      <br />
-      <br />
-
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="filled" color="primary2">
-          <MenuItem value={1}>Value</MenuItem>
-        </Select>
-        <FormHelperText>Helper text</FormHelperText>
+          defaultValue="Value"
+        />
+        <FormHelperText>
+          Helper text
+        </FormHelperText>
       </FormControl>
     </Wrapper>
-  );
-};
+  )
+}

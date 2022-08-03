@@ -4,12 +4,12 @@ import {
   InputLabel,
   MenuItem,
   Select,
-} from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import { Wrapper } from '../Wrapper';
+} from "@mui/material"
+import VisibilityIcon from "@mui/icons-material/Visibility"
+import { Wrapper } from "../Wrapper"
 
 export const Selects = () => {
-  const sx = { m: 1, minWidth: 220 };
+  const sx = { m: 1, minWidth: 220 }
 
   return (
     <Wrapper title="Selects">
@@ -25,7 +25,6 @@ export const Selects = () => {
           variant="standard"
           color="primary2"
           // defaultOpen
-          active
         ></Select>
       </FormControl>
       <FormControl sx={sx}>
@@ -51,11 +50,11 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel variant="standard">Label</InputLabel>
+        <InputLabel variant="standard">Medium</InputLabel>
         <Select variant="standard" color="primary2"></Select>
       </FormControl>
       <FormControl sx={sx} size="small">
-        <InputLabel variant="standard">Label</InputLabel>
+        <InputLabel variant="standard">Small</InputLabel>
         <Select variant="standard" color="primary2"></Select>
       </FormControl>
 
@@ -79,9 +78,7 @@ export const Selects = () => {
         <Select variant="standard" color="primary2">
           <MenuItem value={1}>Value</MenuItem>
         </Select>
-        <FormHelperText variant="standart">
-          Helper text
-        </FormHelperText>
+        <FormHelperText variant="standart">Helper text</FormHelperText>
       </FormControl>
 
       <br />
@@ -89,20 +86,25 @@ export const Selects = () => {
 
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
+        <Select variant="outlined" color="primary2" label="Label"></Select>
+      </FormControl>
+      <FormControl sx={sx}>
+        <InputLabel>Label</InputLabel>
+        <Select
+          label="Label"
+          variant="outlined"
+          color="primary2"
+          // defaultOpen
+        ></Select>
       </FormControl>
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
         <Select
           variant="outlined"
           color="primary2"
-          // defaultOpen
-          focus
+          label="Label"
+          error
         ></Select>
-      </FormControl>
-      <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" error></Select>
       </FormControl>
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
@@ -114,7 +116,12 @@ export const Selects = () => {
 
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" defaultValue={1}>
+        <Select
+          variant="outlined"
+          color="primary2"
+          label="Label"
+          defaultValue={1}
+        >
           <MenuItem value={1}>Value</MenuItem>
         </Select>
       </FormControl>
@@ -123,12 +130,12 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
+        <InputLabel>Medium</InputLabel>
+        <Select variant="outlined" color="primary2" label="Medium"></Select>
       </FormControl>
       <FormControl sx={sx} size="small">
-        <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2"></Select>
+        <InputLabel>Small</InputLabel>
+        <Select variant="outlined" color="primary2" label="Small"></Select>
       </FormControl>
 
       <br />
@@ -136,7 +143,12 @@ export const Selects = () => {
 
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2" defaultValue={1}>
+        <Select
+          variant="outlined"
+          color="primary2"
+          label="Label"
+          defaultValue={1}
+        >
           <MenuItem value={1}>
             <VisibilityIcon />
           </MenuItem>
@@ -148,7 +160,7 @@ export const Selects = () => {
 
       <FormControl sx={sx}>
         <InputLabel>Label</InputLabel>
-        <Select variant="outlined" color="primary2">
+        <Select variant="outlined" color="primary2" label="Label">
           <MenuItem value={1}>Value</MenuItem>
         </Select>
         <FormHelperText>Helper text</FormHelperText>
@@ -158,11 +170,11 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2"></Select>
       </FormControl>
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select
           variant="filled"
           color="primary2"
@@ -170,11 +182,11 @@ export const Selects = () => {
         ></Select>
       </FormControl>
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2" error></Select>
       </FormControl>
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2" disabled></Select>
       </FormControl>
 
@@ -182,7 +194,7 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2" defaultValue={1}>
           <MenuItem value={1}>Value</MenuItem>
         </Select>
@@ -192,11 +204,11 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2"></Select>
       </FormControl>
       <FormControl sx={sx} size="small">
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2"></Select>
       </FormControl>
 
@@ -204,7 +216,7 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2" defaultValue={1}>
           <MenuItem value={1}>
             <VisibilityIcon />
@@ -216,12 +228,12 @@ export const Selects = () => {
       <br />
 
       <FormControl sx={sx}>
-        <InputLabel>Label</InputLabel>
+        <InputLabel variant="filled">Label</InputLabel>
         <Select variant="filled" color="primary2">
           <MenuItem value={1}>Value</MenuItem>
         </Select>
         <FormHelperText>Helper text</FormHelperText>
       </FormControl>
     </Wrapper>
-  );
-};
+  )
+}
