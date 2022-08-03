@@ -1,114 +1,71 @@
-// import { Slider } from "@mui/material"
-
-// const Sliders = () => {
-//   const marks = [
-//     {
-//       value: 0,
-//       label: '0°C',
-//     },
-//     {
-//       value: 20,
-//       label: '20°C',
-//     },
-//     {
-//       value: 37,
-//       label: '37°C',
-//     },
-//     {
-//       value: 100,
-//       label: '100°C',
-//     },
-//   ];
-//   return (
-//     <>
-//       <br />
-//       <br />
-//       <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" color=""/>
-//       <br />
-//       <br />
-//       <Slider
-//         aria-label="Custom marks"
-//         defaultValue={30}
-//         valueLabelDisplay="auto"
-//         step={10}
-//         marks={marks}
-//         min={10}
-//         max={110}
-
-//       />
-//     </>
-//   )
-// }
-
-// export default Sliders
-
-import * as React from "react"
-import Box from "@mui/material/Box"
-import Slider from "@mui/material/Slider"
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import { Wrapper } from '../Wrapper';
 
 const marks = [
   {
     value: 0,
-    label: "0",
+    label: '0',
   },
   {
     value: 10,
-    label: "",
+    label: '',
   },
   {
     value: 20,
-    label: "",
+    label: '',
   },
 
   {
     value: 30,
-    label: "",
+    label: '',
   },
   {
     value: 40,
-    label: "",
+    label: '',
   },
   {
     value: 50,
-    label: "",
+    label: '',
   },
   {
     value: 60,
-    label: "",
+    label: '',
   },
 
   {
     value: 70,
-    label: "",
+    label: '',
   },
   {
     value: 80,
-    label: "",
+    label: '',
   },
   {
     value: 90,
-    label: "",
+    label: '',
   },
   {
     value: 100,
-    label: "100",
+    label: '100',
   },
-]
+];
 
 function valuetext(value) {
-  return `${value}`
+  return `${value}`;
 }
 
 function preventHorizontalKeyboardNavigation(event) {
-  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-    event.preventDefault()
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
   }
 }
 
 const Sliders = () => {
   return (
-    <>
-      <Box sx={{ width: 300, margin: "10px" }}>
+    <Wrapper title="Sliders">
+      <Box sx={{ width: 300, margin: '10px' }}>
         <Slider
           color="primary2"
           aria-label="Custom marks"
@@ -150,7 +107,7 @@ const Sliders = () => {
         />
         <Slider
           color="primary2"
-          getAriaLabel={() => "Temperature range"}
+          getAriaLabel={() => 'Temperature range'}
           value={[20, 40]}
           valueLabelDisplay="auto"
           getAriaValueText={valuetext}
@@ -158,7 +115,7 @@ const Sliders = () => {
         />
         <Slider
           color="primary2"
-          getAriaLabel={() => "Temperature range"}
+          getAriaLabel={() => 'Temperature range'}
           value={[20, 40]}
           valueLabelDisplay="auto"
           getAriaValueText={valuetext}
@@ -201,7 +158,6 @@ const Sliders = () => {
         />
       </Box>
       <Box sx={{ height: 300 }}>
-    
         <Slider
           orientation="vertical"
           color="primary2"
@@ -248,7 +204,7 @@ const Sliders = () => {
         <Slider
           orientation="vertical"
           color="primary2"
-          getAriaLabel={() => "Temperature range"}
+          getAriaLabel={() => 'Temperature range'}
           value={[20, 40]}
           valueLabelDisplay="auto"
           getAriaValueText={valuetext}
@@ -257,7 +213,7 @@ const Sliders = () => {
         <Slider
           orientation="vertical"
           color="primary2"
-          getAriaLabel={() => "Temperature range"}
+          getAriaLabel={() => 'Temperature range'}
           value={[20, 40]}
           valueLabelDisplay="auto"
           getAriaValueText={valuetext}
@@ -303,8 +259,8 @@ const Sliders = () => {
           valueLabelDisplay="auto"
         />
       </Box>
-    </>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default Sliders
+export default Sliders;

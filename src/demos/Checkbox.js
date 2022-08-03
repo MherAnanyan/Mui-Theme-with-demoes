@@ -1,9 +1,10 @@
-import { FormControlLabel, Typography } from "@mui/material"
-import Checkbox from "@mui/material/Checkbox"
+import { FormControlLabel, Typography } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
+import { Wrapper } from '../Wrapper';
 
-const CheckBoxes = () => {
+export const MuiCheckbox = () => {
   return (
-    <>
+    <Wrapper title="Checkbox">
       <br />
       <br />
       <Checkbox />
@@ -93,8 +94,6 @@ const CheckBoxes = () => {
         label={<Typography color="text.primary">Label</Typography>}
         control={<Checkbox defaultChecked indeterminate />}
       />
-    </>
-  )
-}
-
-export default CheckBoxes
+    </Wrapper>
+  );
+};

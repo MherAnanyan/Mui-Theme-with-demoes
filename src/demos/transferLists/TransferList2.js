@@ -9,6 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import { Wrapper } from '../../Wrapper';
 
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
@@ -22,7 +23,7 @@ function union(a, b) {
   return [...a, ...not(b, a)];
 }
 
-export default function TransferList() {
+export const TransferListSecond = () => {
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([0, 1, 2, 3]);
   const [right, setRight] = React.useState([4, 5, 6, 7]);
@@ -43,7 +44,8 @@ export default function TransferList() {
     setChecked(newChecked);
   };
 
-  const numberOfChecked = (items) => intersection(checked, items).length;
+  const numberOfChecked = (items) =>
+    intersection(checked, items).length;
 
   const handleToggleAll = (items) => () => {
     if (numberOfChecked(items) === items.length) {
@@ -72,9 +74,13 @@ export default function TransferList() {
         avatar={
           <Checkbox
             onClick={handleToggleAll(items)}
-            checked={numberOfChecked(items) === items.length && items.length !== 0}
+            checked={
+              numberOfChecked(items) === items.length &&
+              items.length !== 0
+            }
             indeterminate={
-              numberOfChecked(items) !== items.length && numberOfChecked(items) !== 0
+              numberOfChecked(items) !== items.length &&
+              numberOfChecked(items) !== 0
             }
             disabled={items.length === 0}
             inputProps={{
@@ -83,7 +89,9 @@ export default function TransferList() {
           />
         }
         title={title}
-        subheader={`${numberOfChecked(items)}/${items.length} selected`}
+        subheader={`${numberOfChecked(items)}/${
+          items.length
+        } selected`}
       />
       <Divider />
       <List
@@ -117,7 +125,10 @@ export default function TransferList() {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`List item ${value + 1}`} />
+              <ListItemText
+                id={labelId}
+                primary={`List item ${value + 1}`}
+              />
             </ListItem>
           );
         })}
@@ -127,33 +138,40 @@ export default function TransferList() {
   );
 
   return (
-    <Grid container spacing={2} justifyContent="center" alignItems="center">
-      <Grid item>{customList('Choices', left)}</Grid>
-      <Grid item>
-        <Grid container direction="column" alignItems="center">
-          <Button
-            sx={{ my: 0.5 }}
-            variant="outlined"
-            size="small"
-            onClick={handleCheckedRight}
-            disabled={leftChecked.length === 0}
-            aria-label="move selected right"
-          >
-            &gt;
-          </Button>
-          <Button
-            sx={{ my: 0.5 }}
-            variant="outlined"
-            size="small"
-            onClick={handleCheckedLeft}
-            disabled={rightChecked.length === 0}
-            aria-label="move selected left"
-          >
-            &lt;
-          </Button>
+    <Wrapper>
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item>{customList('Choices', left)}</Grid>
+        <Grid item>
+          <Grid container direction="column" alignItems="center">
+            <Button
+              sx={{ my: 0.5 }}
+              variant="outlined"
+              size="small"
+              onClick={handleCheckedRight}
+              disabled={leftChecked.length === 0}
+              aria-label="move selected right"
+            >
+              &gt;
+            </Button>
+            <Button
+              sx={{ my: 0.5 }}
+              variant="outlined"
+              size="small"
+              onClick={handleCheckedLeft}
+              disabled={rightChecked.length === 0}
+              aria-label="move selected left"
+            >
+              &lt;
+            </Button>
+          </Grid>
         </Grid>
+        <Grid item>{customList('Chosen', right)}</Grid>
       </Grid>
-      <Grid item>{customList('Chosen', right)}</Grid>
-    </Grid>
+    </Wrapper>
   );
-}
+};

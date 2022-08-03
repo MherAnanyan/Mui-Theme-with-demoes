@@ -1,15 +1,19 @@
-import { Button } from "@mui/material"
-import ButtonGroup from "@mui/material/ButtonGroup"
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
-import Box from "@mui/material/Box"
+import { Button } from '@mui/material';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Box from '@mui/material/Box';
+import { Wrapper } from '../Wrapper';
 
-const ButtonGroups = ({mode}) => {
+const ButtonGroups = ({ mode }) => {
   return (
-    <>
+    <Wrapper title="Button Groups">
       <br />
       <br />
 
-      <ButtonGroup variant="contained" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="contained"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>One</Button>
         <Button>Two</Button>
         <Button>Three</Button>
@@ -18,7 +22,10 @@ const ButtonGroups = ({mode}) => {
       <br />
       <br />
 
-      <ButtonGroup variant="outlined" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="outlined"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>One</Button>
         <Button>Two</Button>
         <Button>Three</Button>
@@ -27,7 +34,10 @@ const ButtonGroups = ({mode}) => {
       <br />
       <br />
 
-      <ButtonGroup variant="text" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="text"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>One</Button>
         <Button>Two</Button>
         <Button>Three</Button>
@@ -38,8 +48,8 @@ const ButtonGroups = ({mode}) => {
 
       <Box
         sx={{
-          display: "flex",
-          "& > *": {
+          display: 'flex',
+          '& > *': {
             m: 1,
           },
         }}
@@ -48,7 +58,7 @@ const ButtonGroups = ({mode}) => {
           orientation="vertical"
           aria-label="vertical contained button group"
           variant="contained"
-          color={mode === "light" ? "secondary" : "primary"}
+          color={mode === 'light' ? 'secondary' : 'primary'}
         >
           <Button key="one">One</Button>
           <Button key="two">Two</Button>
@@ -57,7 +67,7 @@ const ButtonGroups = ({mode}) => {
         <ButtonGroup
           orientation="vertical"
           aria-label="vertical outlined button group"
-          color={mode === "light" ? "secondary" : "primary"}
+          color={mode === 'light' ? 'secondary' : 'primary'}
         >
           <Button key="one">One</Button>
           <Button key="two">Two</Button>
@@ -67,7 +77,7 @@ const ButtonGroups = ({mode}) => {
           orientation="vertical"
           aria-label="vertical contained button group"
           variant="text"
-          color={mode === "light" ? "secondary" : "primary"}
+          color={mode === 'light' ? 'secondary' : 'primary'}
         >
           <Button key="one">One</Button>
           <Button key="two">Two</Button>
@@ -78,7 +88,11 @@ const ButtonGroups = ({mode}) => {
       <br />
       <br />
 
-      <ButtonGroup size="large" variant="contained" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        size="large"
+        variant="contained"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>LARGE</Button>
         <Button>LARGE</Button>
         <Button>LARGE</Button>
@@ -87,7 +101,11 @@ const ButtonGroups = ({mode}) => {
       <br />
       <br />
 
-      <ButtonGroup size="medium" variant="contained" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        size="medium"
+        variant="contained"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>MEDIUM</Button>
         <Button>MEDIUM</Button>
         <Button>MEDIUM</Button>
@@ -96,7 +114,11 @@ const ButtonGroups = ({mode}) => {
       <br />
       <br />
 
-      <ButtonGroup size="small" variant="contained" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        size="small"
+        variant="contained"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>SMALL</Button>
         <Button>SMALL</Button>
         <Button>SMALL</Button>
@@ -104,7 +126,11 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="contained" size="large" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="contained"
+        size="large"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>LARGE</Button>
         <Button size="small">
           <ArrowDropDownIcon />
@@ -113,7 +139,11 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="contained" size="medium" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="contained"
+        size="medium"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>MEDIUM</Button>
         <Button size="small">
           <ArrowDropDownIcon />
@@ -122,7 +152,11 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="contained" size="small" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="contained"
+        size="small"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>SMALL</Button>
         <Button size="small">
           <ArrowDropDownIcon />
@@ -131,7 +165,11 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="outlined" size="large" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="outlined"
+        size="large"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>LARGE</Button>
         <Button size="small">
           <ArrowDropDownIcon />
@@ -140,7 +178,11 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="outlined" size="medium" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="outlined"
+        size="medium"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>MEDIUM</Button>
         <Button size="small">
           <ArrowDropDownIcon />
@@ -149,14 +191,18 @@ const ButtonGroups = ({mode}) => {
 
       <br />
       <br />
-      <ButtonGroup variant="outlined" size="small" color={mode === "light" ? "secondary" : "primary"}>
+      <ButtonGroup
+        variant="outlined"
+        size="small"
+        color={mode === 'light' ? 'secondary' : 'primary'}
+      >
         <Button>SMALL</Button>
         <Button size="small">
           <ArrowDropDownIcon />
         </Button>
       </ButtonGroup>
-    </>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default ButtonGroups
+export default ButtonGroups;

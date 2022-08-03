@@ -1,6 +1,7 @@
 import { grey } from '@mui/material/colors';
 
 export const lightPalette = {
+  mode: 'light',
   background: {
     default: '#ffffff',
   },
@@ -89,6 +90,7 @@ export const lightPalette = {
 };
 
 export const darkPalette = {
+  mode: 'dark',
   background: {
     default: '#000000',
   },

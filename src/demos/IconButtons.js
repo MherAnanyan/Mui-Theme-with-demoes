@@ -1,17 +1,21 @@
-import StarIcon from "@mui/icons-material/Star"
-import { IconButton } from "@mui/material"
+import StarIcon from '@mui/icons-material/Star';
+import { IconButton } from '@mui/material';
+import { Wrapper } from '../Wrapper';
 
 const IconButtons = ({ mode }) => {
   return (
-    <>
+    <Wrapper title="Icon Buttons">
       <br />
       <br />
 
-      <IconButton color={mode === "light" ? "secondary" : "primary"}>
+      <IconButton color={mode === 'light' ? 'secondary' : 'primary'}>
         <StarIcon />
       </IconButton>
 
-      <IconButton color={mode === "light" ? "secondary" : "primary"} disabled>
+      <IconButton
+        color={mode === 'light' ? 'secondary' : 'primary'}
+        disabled
+      >
         <StarIcon />
       </IconButton>
 
@@ -20,69 +24,55 @@ const IconButtons = ({ mode }) => {
 
       <IconButton
         size="large"
-        color={mode === "light" ? "secondary" : "primary"}
+        color={mode === 'light' ? 'secondary' : 'primary'}
       >
-        <StarIcon fontSize="inherit"/>
+        <StarIcon fontSize="inherit" />
       </IconButton>
       <IconButton
         size="medium"
-        color={mode === "light" ? "secondary" : "primary"}
+        color={mode === 'light' ? 'secondary' : 'primary'}
       >
         <StarIcon ontSize="inherit" />
       </IconButton>
       <IconButton
-      size="small"
-        color={mode === "light" ? "secondary" : "primary"}
+        size="small"
+        color={mode === 'light' ? 'secondary' : 'primary'}
       >
-        <StarIcon fontSize="inherit"/>
+        <StarIcon fontSize="inherit" />
       </IconButton>
 
       <br />
       <br />
 
-      <IconButton
-        color="primary"
-      >
-        <StarIcon/>
+      <IconButton color="primary">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="secondary"
-      >
-        <StarIcon/>
+      <IconButton color="secondary">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="error"
-      >
-        <StarIcon/>
+      <IconButton color="error">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="warning"
-      >
-        <StarIcon/>
+      <IconButton color="warning">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="info"
-      >
-        <StarIcon/>
+      <IconButton color="info">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="success"
-      >
-        <StarIcon/>
+      <IconButton color="success">
+        <StarIcon />
       </IconButton>
 
-      <IconButton
-        color="myinherit"
-      >
-        <StarIcon/>
+      <IconButton color="myinherit">
+        <StarIcon />
       </IconButton>
-    </>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default IconButtons
+export default IconButtons;

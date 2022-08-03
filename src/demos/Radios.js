@@ -1,8 +1,9 @@
-import { FormControlLabel, Radio, Typography } from "@mui/material"
+import { FormControlLabel, Radio, Typography } from '@mui/material';
+import { Wrapper } from '../Wrapper';
 
 const Radios = () => {
   return (
-    <>
+    <Wrapper title="Radios">
       <br />
       <br />
       <Radio />
@@ -13,7 +14,7 @@ const Radios = () => {
 
       <br />
       <br />
-      <Radio disabled/>
+      <Radio disabled />
       <FormControlLabel control={<Radio />} label="Label" disabled />
 
       <br />
@@ -80,8 +81,8 @@ const Radios = () => {
         control={<Radio />}
         label={<Typography color="text.primary">Label</Typography>}
       />
-    </>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default Radios
+export default Radios;

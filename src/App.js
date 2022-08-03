@@ -3,33 +3,30 @@ import Test from './Test';
 import {
   createTheme,
   ThemeProvider,
-  Typography,
-  Button,
-  IconButton,
   CssBaseline,
+  BottomNavigation,
 } from '@mui/material';
 import Typographys from './demos/Typographys.js';
 import Buttons from './demos/Buttons';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import { useState } from 'react';
 import { lightPalette, darkPalette } from './palettes';
-import CheckBoxes from './demos/CheckBoxes';
+import { MuiCheckbox } from './demos/Checkbox';
 import Fabs from './demos/Fabs';
 import Radios from './demos/Radios';
 import Ratings from './demos/Ratings';
 import Sliders from './demos/Sliders';
 import Switches from './demos/Switches';
-import TransferLists1 from './demos/transferLists/TransferList1';
-import TransferLists2 from './demos/transferLists/TransferList2';
+import { TransferListFirst } from './demos/transferLists/TransferList1';
+import { TransferListSecond } from './demos/transferLists/TransferList2';
 import IconButtons from './demos/IconButtons';
 import ToggleButtons from './demos/ToggleButtons';
 import InputElements from './demos/InputElements';
-import { CheckBox } from '@material-ui/icons';
 import ButtonGroups from './demos/ButtonGroups';
-import Select from './demos/Select';
 import { MuiBreadcrumbs } from './demos/Breadcrumbs';
 import TemporaryDrawer from './demos/MuiDrower';
-
+import { Selects } from './demos/Selects';
+import { TextFields } from './demos/TextFields';
+import { BottomNav } from './demos/BottomNav';
 const regular = 400,
   medium = 500,
   semiBold = 600,
@@ -266,8 +263,7 @@ const App = () => {
             {mode} mode
           </button>
           <CssBaseline />
-
-          {/* <Typographys />
+          <Typographys />
           <Buttons />
           <ButtonGroups />
           <ToggleButtons />
@@ -278,12 +274,15 @@ const App = () => {
           <InputElements />
           <IconButtons />
           <Fabs />
-          <CheckBoxes />
-          <TransferLists1 />
-          <TransferLists2 />
-          <Select />
-          <MuiBreadcrumbs /> */}
+          <MuiCheckbox />
+          <TransferListFirst />
+          <TransferListSecond />
+          <Selects />
+          <MuiBreadcrumbs />
+          <BottomNavigation />
           <TemporaryDrawer />
+          <TextFields />
+          <BottomNav />
         </div>
       </ThemeProvider>
     </>

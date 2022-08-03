@@ -9,6 +9,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import StarIcon from '@mui/icons-material/Star';
+import { Wrapper } from '../Wrapper';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -72,7 +73,7 @@ export default function TemporaryDrawer() {
   );
 
   return (
-    <div>
+    <Wrapper title="Drower">
       {['left', 'right', 'top', 'bottom'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
@@ -87,6 +88,6 @@ export default function TemporaryDrawer() {
           </Drawer>
         </React.Fragment>
       ))}
-    </div>
+    </Wrapper>
   );
 }
