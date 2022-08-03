@@ -3,24 +3,25 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-} from "@mui/material"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import { Wrapper } from "../Wrapper"
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Wrapper } from '../Wrapper';
 
 export const Accordions = () => {
   return (
-    <Wrapper title="Autocomplete">
+    <Wrapper title="Accordions">
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ width: "33%" }}>Heading</Typography>
-          <Typography sx={{ color: "text.secondary" }}>
+          <Typography sx={{ width: '33%' }}>Heading</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>
             Secondary heading
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse malesuada lacus ex, sit amet blandit leo
+            lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -30,15 +31,16 @@ export const Accordions = () => {
 
       <Accordion disabled>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ width: "33%" }}>Heading</Typography>
-          <Typography sx={{ color: "text.secondary" }}>
+          <Typography sx={{ width: '33%' }}>Heading</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>
             Secondary heading
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse malesuada lacus ex, sit amet blandit leo
+            lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -48,18 +50,19 @@ export const Accordions = () => {
 
       <Accordion expanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ width: "33%" }}>Heading</Typography>
-          <Typography sx={{ color: "text.secondary" }}>
+          <Typography sx={{ width: '33%' }}>Heading</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>
             Secondary heading
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse malesuada lacus ex, sit amet blandit leo
+            lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>
     </Wrapper>
-  )
-}
+  );
+};

@@ -87,6 +87,10 @@ export const lightPalette = {
     light: '#414898',
     contrastText: '#FFFFFF',
   },
+  link: {
+    main: '#1F69FF',
+    primary: '#012169',
+  },
 };
 
 export const darkPalette = {
@@ -175,5 +179,9 @@ export const darkPalette = {
     dark: '#0077BA',
     light: '#8CD6FF',
     contrastText: 'rgba(0, 0, 0, 0.87)',
+  },
+  link: {
+    main: '#FFFFFF',
+    primary: '#54A5ED',
   },
 };
