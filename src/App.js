@@ -27,6 +27,13 @@ import TemporaryDrawer from './demos/MuiDrower';
 import { Selects } from './demos/Selects';
 import { TextFields } from './demos/TextFields';
 import { BottomNav } from './demos/BottomNav';
+import { Links } from './demos/Link';
+import { Menus } from './demos/Menus/Menus';
+import { Paginations } from './demos/Pagination';
+import { PlaygroundSpeedDial } from './demos/SpeedDial';
+import { Accordions } from './demos/Accardions';
+import { Autocompletes } from './demos/Autocomplete';
+import { Multilines } from './demos/Multilines';
 const regular = 400,
   medium = 500,
   semiBold = 600,
@@ -266,23 +273,30 @@ const App = () => {
           <Typographys />
           <Buttons />
           <ButtonGroups />
+          <IconButtons />
           <ToggleButtons />
           <Switches />
           <Sliders />
           <Ratings />
           <Radios />
           <InputElements />
-          <IconButtons />
           <Fabs />
           <MuiCheckbox />
           <TransferListFirst />
           <TransferListSecond />
           <Selects />
-          <TextFields />
           <MuiBreadcrumbs />
           <BottomNavigation />
           <TemporaryDrawer />
+          <TextFields />
           <BottomNav />
+          <Links />
+          <Menus />
+          <Paginations />
+          <PlaygroundSpeedDial />
+          <Accordions />
+          <Multilines />
+          <Autocompletes />
         </div>
       </ThemeProvider>
     </>
