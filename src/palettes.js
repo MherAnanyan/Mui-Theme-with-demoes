@@ -103,6 +103,9 @@ export const lightPalette = {
   avatar: {
     main: "#F0F5FB",
     text: "#012169"
+  },
+  icon: {
+    main: "#00000080",
   }
 };
 
@@ -209,5 +212,8 @@ export const darkPalette = {
   avatar: {
     main: "#72869E",
     text: "#121212"
+  },
+  icon: {
+    main: "#ffffff80",
   }
 };
