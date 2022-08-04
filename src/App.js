@@ -1,15 +1,13 @@
-//transform| Sentence=>none; All Cap=> textTransform: "uppercase"
-import Test from './Test';
+import { useState } from 'react';
 import {
   createTheme,
   ThemeProvider,
   CssBaseline,
-  BottomNavigation,
 } from '@mui/material';
+import { Switch } from '@material-ui/core';
+import { lightPalette, darkPalette } from './palettes';
 import Typographys from './demos/Typographys.js';
 import Buttons from './demos/Buttons';
-import { useState } from 'react';
-import { lightPalette, darkPalette } from './palettes';
 import { MuiCheckbox } from './demos/Checkbox';
 import Fabs from './demos/Fabs';
 import Radios from './demos/Radios';
@@ -34,6 +32,8 @@ import { PlaygroundSpeedDial } from './demos/SpeedDial';
 import { Accordions } from './demos/Accardions';
 import { Autocompletes } from './demos/Autocomplete';
 import { Multilines } from './demos/Multilines';
+import { Steppers } from './demos/Steppers';
+
 const regular = 400,
   medium = 500,
   semiBold = 600,
@@ -257,20 +257,16 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <div
-        // style={{
-        //   backgroundColor: theme.palette.background.default,
-        // }}
-        >
-          <button
-            onClick={() =>
-              setMode(mode === 'light' ? 'dark' : 'light')
-            }
-          >
-            {mode} mode
-          </button>
+        <div>
+          <div style={{ position: 'fixed', top: 0, zIndex: 1000 }}>
+            <Switch
+              onChange={() =>
+                setMode(mode === 'light' ? 'dark' : 'light')
+              }
+            />
+          </div>
           <CssBaseline />
-          <Typographys />
+          {/* <Typographys />
           <Buttons />
           <ButtonGroups />
           <IconButtons />
@@ -296,7 +292,8 @@ const App = () => {
           <PlaygroundSpeedDial />
           <Accordions />
           <Multilines />
-          <Autocompletes />
+          <Autocompletes /> */}
+          <Steppers />
         </div>
       </ThemeProvider>
     </>

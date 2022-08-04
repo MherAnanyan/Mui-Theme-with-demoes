@@ -56,12 +56,6 @@ function valuetext(value) {
   return `${value}`;
 }
 
-function preventHorizontalKeyboardNavigation(event) {
-  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-    event.preventDefault();
-  }
-}
-
 const Sliders = () => {
   return (
     <Wrapper title="Sliders">
