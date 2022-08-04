@@ -1,12 +1,5 @@
 import { Avatar, Badge, Box } from "@mui/material"
 import { Wrapper } from "../Wrapper"
-import styled from "@emotion/styled"
-
-const StyledBadge = styled(Badge)(() => ({
-  "& .MuiBadge-badge": {
-    backgroundColor: "#44b700",
-  },
-}))
 
 export const Avatars = () => {
   const boxSx = { m: 5, display: "inline-block" }
@@ -52,13 +45,15 @@ export const Avatars = () => {
       <br />
 
       <Box sx={boxSx}>
-        <StyledBadge
+        <Badge
           overlap="circular"
+          color="success"
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
           variant="dot"
+          badgeContent=""
         >
           <Avatar sx={sx}>OP</Avatar>
-        </StyledBadge>
+        </Badge>
       </Box>
     </Wrapper>
   )
