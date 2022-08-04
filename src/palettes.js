@@ -91,6 +91,12 @@ export const lightPalette = {
     main: '#1F69FF',
     primary: '#012169',
   },
+  progress: {
+    main: "#012169",
+  },
+  progress2: {
+    main: "#1F69FF",
+  },
 };
 
 export const darkPalette = {
@@ -183,5 +189,11 @@ export const darkPalette = {
   link: {
     main: '#FFFFFF',
     primary: '#54A5ED',
+  },
+  progress: {
+    main: "#54A5ED",
+  },
+  progress2: {
+    main: "#72869E",
   },
 };
