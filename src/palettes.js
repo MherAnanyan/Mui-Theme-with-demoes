@@ -100,6 +100,10 @@ export const lightPalette = {
   Step: {
     main: '#012169',
   },
+  avatar: {
+    main: "#F0F5FB",
+    text: "#012169"
+  }
 };
 
 export const darkPalette = {
@@ -202,4 +206,8 @@ export const darkPalette = {
   Step: {
     main: '#54A5ED',
   },
+  avatar: {
+    main: "#72869E",
+    text: "#121212"
+  }
 };
