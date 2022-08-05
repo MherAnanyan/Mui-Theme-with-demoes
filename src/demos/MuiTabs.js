@@ -75,7 +75,6 @@ export const MuiTabs = () => {
             onChange={handleChange}
             aria-label="basic tabs example"
             sx={{ bgcolor: 'primary2.main' }}
-            classes={{ indicator: classes.indicator }}
             TabIndicatorProps={{
               sx: {
                 backgroundColor: 'tabText.indicator',
@@ -97,7 +96,6 @@ export const MuiTabs = () => {
             onChange={handleChange}
             aria-label="basic tabs example"
             sx={{ bgcolor: 'primary2.main' }}
-            classes={{ indicator: classes.indicator }}
             TabIndicatorProps={{
               sx: {
                 backgroundColor: 'tabText.indicator',
@@ -153,7 +151,7 @@ export const MuiTabs = () => {
         </Box>
       </Box>
       <br />
-      <Box sx={{ width: '30%' }}>
+      <Box sx={{ width: '300px' }}>
         <Box>
           <Tabs
             orientation="vertical"
@@ -161,7 +159,6 @@ export const MuiTabs = () => {
             onChange={handleChange}
             aria-label="basic tabs example"
             sx={{ bgcolor: 'primary2.main' }}
-            classes={{ indicator: classes.indicator }}
             TabIndicatorProps={{
               sx: {
                 backgroundColor: 'tabText.indicator',
@@ -195,7 +192,7 @@ export const MuiTabs = () => {
         </Box>
       </Box>
       <br />
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: '480px' }}>
         <Box>
           <Tabs
             variant="scrollable"
@@ -204,7 +201,6 @@ export const MuiTabs = () => {
             scrollButtons
             aria-label="basic tabs example"
             sx={{ bgcolor: 'primary2.main' }}
-            classes={{ indicator: classes.indicator }}
             TabIndicatorProps={{
               sx: {
                 backgroundColor: 'tabText.indicator',
