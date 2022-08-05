@@ -33,6 +33,19 @@ import { Accordions } from './demos/Accardions';
 import { Autocompletes } from './demos/Autocomplete';
 import { Multilines } from './demos/Multilines';
 import { Steppers } from './demos/Steppers';
+import { Alerts } from './demos/Alerts';
+import { Skeletons } from './demos/Skeletons';
+import { Dialogs } from './demos/Dialogs';
+import { Cards } from './demos/Cards';
+import { Papers } from './demos/Papers';
+import { Progresses } from './demos/Progresses';
+import { Snackbars } from './demos/Snackbars';
+import { Avatars } from './demos/Avatars';
+import { Badges } from './demos/Badges';
+import { Chips } from './demos/Chips';
+import { Dividers } from './demos/Dividers';
+import { Icons } from './demos/Icons';
+import { MuiTabs } from './demos/MuiTabs';
 
 const regular = 400,
   medium = 500,
@@ -266,7 +279,7 @@ const App = () => {
             />
           </div>
           <CssBaseline />
-          {/* <Typographys />
+          <Typographys />
           <Buttons />
           <ButtonGroups />
           <IconButtons />
@@ -282,7 +295,6 @@ const App = () => {
           <TransferListSecond />
           <Selects />
           <MuiBreadcrumbs />
-          <BottomNavigation />
           <TemporaryDrawer />
           <TextFields />
           <BottomNav />
@@ -292,8 +304,21 @@ const App = () => {
           <PlaygroundSpeedDial />
           <Accordions />
           <Multilines />
-          <Autocompletes /> */}
+          <Autocompletes />
           <Steppers />
+          <Snackbars />
+          <Skeletons />
+          <Progresses />
+          <Papers />
+          <Dialogs />
+          <Cards />
+          <Alerts />
+          <Avatars />
+          <Badges />
+          <Chips />
+          <Icons />
+          <Dividers />
+          <MuiTabs />
         </div>
       </ThemeProvider>
     </>

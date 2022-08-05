@@ -32,7 +32,7 @@ const IconButtons = ({ mode }) => {
         size="medium"
         color={mode === 'light' ? 'secondary' : 'primary'}
       >
-        <StarIcon ontSize="inherit" />
+        <StarIcon fontSize="inherit" />
       </IconButton>
       <IconButton
         size="small"

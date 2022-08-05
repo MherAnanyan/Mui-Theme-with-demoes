@@ -101,12 +101,17 @@ export const lightPalette = {
     main: '#012169',
   },
   avatar: {
-    main: "#F0F5FB",
-    text: "#012169"
+    main: '#F0F5FB',
+    text: '#012169',
   },
   icon: {
-    main: "#00000080",
-  }
+    main: '#00000080',
+  },
+  tabText: {
+    main: '#FFFFFF',
+    indicator: '#1F69FF',
+    secondary: '#012169',
+  },
 };
 
 export const darkPalette = {
@@ -210,10 +215,15 @@ export const darkPalette = {
     main: '#54A5ED',
   },
   avatar: {
-    main: "#72869E",
-    text: "#121212"
+    main: '#72869E',
+    text: '#121212',
   },
   icon: {
-    main: "#ffffff80",
-  }
+    main: '#ffffff80',
+  },
+  tabText: {
+    main: 'rgba(0, 0, 0, 0.87)',
+    indicator: '#72869E',
+    secondary: '#54A5ED',
+  },
 };

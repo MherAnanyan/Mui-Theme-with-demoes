@@ -1,9 +1,9 @@
-import { Autocomplete, TextField } from "@mui/material"
-import { Wrapper } from "../Wrapper"
+import { Autocomplete, TextField } from '@mui/material';
+import { Wrapper } from '../Wrapper';
 
 export const Autocompletes = () => {
-  const sx = { m: 1, width: 320, display: "inline-block" }
-  const menuItems = new Array(10).fill(0).map((_, i) => `Item ${i}`)
+  const sx = { m: 1, width: 320, display: 'inline-block' };
+  const menuItems = new Array(10).fill(0).map((_, i) => `Item ${i}`);
 
   return (
     <Wrapper title="Autocomplete">
@@ -11,7 +11,7 @@ export const Autocompletes = () => {
         sx={sx}
         options={menuItems}
         filterSelectedOptions
-        defaultValue={[menuItems[0]]}
+        defaultValue={menuItems[0]}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -25,7 +25,7 @@ export const Autocompletes = () => {
         sx={sx}
         options={menuItems}
         filterSelectedOptions
-        defaultValue={[menuItems[0]]}
+        defaultValue={menuItems[0]}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -39,7 +39,7 @@ export const Autocompletes = () => {
         sx={sx}
         options={menuItems}
         filterSelectedOptions
-        defaultValue={[menuItems[0]]}
+        defaultValue={menuItems[0]}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -70,5 +70,5 @@ export const Autocompletes = () => {
         )}
       />
     </Wrapper>
-  )
-}
+  );
+};

@@ -41,22 +41,25 @@ export default function TemporaryDrawer() {
     >
       <header>Subheader</header>
       <List>
-        {['List item', 'List item', 'List item', 'List item'].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <StarIcon />
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
+        {[
+          'List item 1',
+          'List item 2',
+          'List item 3',
+          'List item 4',
+        ].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <StarIcon />
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
       </List>
       <Divider />
       <List>
-        {['List item', 'List item', 'List item'].map(
+        {['List item 1', 'List item 2', 'List item 3'].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>

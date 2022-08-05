@@ -22,9 +22,12 @@ const actions = [
     icon: <SpeedDialIcon fontSize="small" />,
     name: 'Tooltip',
   },
-  { icon: <SpeedDialIcon color="secondary.main" />, name: 'Tooltip' },
-  { icon: <SpeedDialIcon />, name: 'Tooltip' },
-  { icon: <SpeedDialIcon />, name: 'Tooltip' },
+  {
+    icon: <SpeedDialIcon color="secondary.main" />,
+    name: 'Tooltip 1',
+  },
+  { icon: <SpeedDialIcon />, name: 'Tooltip 2' },
+  { icon: <SpeedDialIcon />, name: 'Tooltip 3' },
 ];
 
 export const PlaygroundSpeedDial = () => {
