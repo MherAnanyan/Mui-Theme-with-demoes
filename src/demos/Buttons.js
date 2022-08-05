@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Wrapper } from '../Wrapper';
+
 const Buttons = () => {
   return (
     <Wrapper title="Buttons">

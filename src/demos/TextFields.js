@@ -3,42 +3,52 @@ import {
   FormHelperText,
   InputAdornment,
   TextField,
-} from "@mui/material"
-import VisibilityIcon from "@mui/icons-material/Visibility"
-import * as React from "react"
-import { Visibility, VisibilityOff } from "@mui/icons-material"
-import { Wrapper } from "../Wrapper"
+  InputLabel,
+  OutlinedInput,
+  IconButton,
+  Input,
+  FilledInput,
+} from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import * as React from 'react';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Wrapper } from '../Wrapper';
 
 export const TextFields = () => {
   const [values, setValues] = React.useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
+    amount: '',
+    password: '',
+    weight: '',
+    weightRange: '',
     showPassword: false,
-  })
+  });
 
   const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleClickShowPassword = () => {
     setValues({
       ...values,
       showPassword: !values.showPassword,
-    })
-  }
+    });
+  };
 
   const handleMouseDownPassword = (event) => {
-    event.preventDefault()
-  }
-  const sx = { m: 1, minWidth: 220 }
+    event.preventDefault();
+  };
+  const sx = { m: 1, minWidth: 220 };
   return (
     <Wrapper title="TextFields">
       <br />
       <br />
 
-      <TextField sx={sx} label="Label" variant="standard" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="standard"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Label"
@@ -75,7 +85,12 @@ export const TextFields = () => {
       <br />
       <br />
 
-      <TextField sx={sx} label="Medium" variant="standard" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Medium"
+        variant="standard"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Small"
@@ -93,36 +108,41 @@ export const TextFields = () => {
         variant="standard"
         color="primary2"
         InputProps={{
-          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+          startAdornment: (
+            <InputAdornment position="start">Kg</InputAdornment>
+          ),
         }}
       />
 
-      {/* <br />
-      <br /> */}
+      <br />
+      <br />
 
-      {/* <FormControl sx={sx} variant="standard" color="primary2">
-        <InputLabel>Password</InputLabel>
-        <OutlinedInput
-          label="Password"
-          type={values.showPassword ? "text" : "password"}
+      <FormControl sx={sx} color="primary2" variant="standard">
+        <InputLabel htmlFor="standard-adornment-password">
+          Password
+        </InputLabel>
+        <Input
+          id="standard-adornment-password"
+          type={values.showPassword ? 'text' : 'password'}
           value={values.password}
-          onChange={handleChange("password")}
+          onChange={handleChange('password')}
           endAdornment={
             <InputAdornment position="end">
               <IconButton
+                aria-label="toggle password visibility"
                 onClick={handleClickShowPassword}
                 onMouseDown={handleMouseDownPassword}
-                edge="end"
               >
-                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                {values.showPassword ? (
+                  <VisibilityOff />
+                ) : (
+                  <Visibility />
+                )}
               </IconButton>
             </InputAdornment>
           }
         />
-      </FormControl> */}
-
-      <br />
-      <br />
+      </FormControl>
 
       <FormControl>
         <TextField
@@ -139,8 +159,13 @@ export const TextFields = () => {
 
       <br />
       <br />
-      
-<TextField sx={sx} label="Label" variant="outlined" color="primary2" />
+
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="outlined"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Label"
@@ -177,7 +202,12 @@ export const TextFields = () => {
       <br />
       <br />
 
-      <TextField sx={sx} label="Medium" variant="outlined" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Medium"
+        variant="outlined"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Small"
@@ -195,9 +225,43 @@ export const TextFields = () => {
         variant="outlined"
         color="primary2"
         InputProps={{
-          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+          startAdornment: (
+            <InputAdornment position="start">Kg</InputAdornment>
+          ),
         }}
       />
+
+      <br />
+      <br />
+
+      <FormControl sx={sx} variant="outlined" color="primary2">
+        <InputLabel htmlFor="outlined-adornment-password">
+          Password
+        </InputLabel>
+        <OutlinedInput
+          id="outlined-adornment-password"
+          type={values.showPassword ? 'text' : 'password'}
+          value={values.password}
+          onChange={handleChange('password')}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+                edge="end"
+              >
+                {values.showPassword ? (
+                  <VisibilityOff />
+                ) : (
+                  <Visibility />
+                )}
+              </IconButton>
+            </InputAdornment>
+          }
+          label="Password"
+        />
+      </FormControl>
 
       <br />
       <br />
@@ -209,16 +273,18 @@ export const TextFields = () => {
           color="primary2"
           defaultValue="Value"
         />
-        <FormHelperText>
-          Helper text
-        </FormHelperText>
+        <FormHelperText>Helper text</FormHelperText>
       </FormControl>
 
-
       <br />
       <br />
 
-      <TextField sx={sx} label="Label" variant="filled" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Label"
+        variant="filled"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Label"
@@ -255,7 +321,12 @@ export const TextFields = () => {
       <br />
       <br />
 
-      <TextField sx={sx} label="Medium" variant="filled" color="primary2" />
+      <TextField
+        sx={sx}
+        label="Medium"
+        variant="filled"
+        color="primary2"
+      />
       <TextField
         sx={sx}
         label="Small"
@@ -273,12 +344,42 @@ export const TextFields = () => {
         variant="filled"
         color="primary2"
         InputProps={{
-          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+          startAdornment: (
+            <InputAdornment position="start">Kg</InputAdornment>
+          ),
         }}
       />
 
       <br />
       <br />
+
+      <FormControl sx={sx} variant="filled" color="primary2">
+        <InputLabel htmlFor="filled-adornment-password">
+          Password
+        </InputLabel>
+        <FilledInput
+          id="filled-adornment-password"
+          type={values.showPassword ? 'text' : 'password'}
+          value={values.password}
+          onChange={handleChange('password')}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+                edge="end"
+              >
+                {values.showPassword ? (
+                  <VisibilityOff />
+                ) : (
+                  <Visibility />
+                )}
+              </IconButton>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
 
       <FormControl variant="filled" sx={sx}>
         <TextField
@@ -287,10 +388,8 @@ export const TextFields = () => {
           color="primary2"
           defaultValue="Value"
         />
-        <FormHelperText>
-          Helper text
-        </FormHelperText>
+        <FormHelperText>Helper text</FormHelperText>
       </FormControl>
     </Wrapper>
-  )
-}
+  );
+};

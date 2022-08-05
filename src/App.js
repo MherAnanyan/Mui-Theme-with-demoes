@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import { Switch } from '@material-ui/core';
 import { lightPalette, darkPalette } from './palettes';
-import Typographys from './demos/Typographys.js';
+import { Typographys } from './demos/Typographys.js';
 import Buttons from './demos/Buttons';
 import { MuiCheckbox } from './demos/Checkbox';
 import Fabs from './demos/Fabs';
@@ -18,7 +18,6 @@ import { TransferListFirst } from './demos/transferLists/TransferList1';
 import { TransferListSecond } from './demos/transferLists/TransferList2';
 import IconButtons from './demos/IconButtons';
 import ToggleButtons from './demos/ToggleButtons';
-import InputElements from './demos/InputElements';
 import ButtonGroups from './demos/ButtonGroups';
 import { MuiBreadcrumbs } from './demos/Breadcrumbs';
 import TemporaryDrawer from './demos/MuiDrower';
@@ -288,7 +287,6 @@ const App = () => {
           <Sliders />
           <Ratings />
           <Radios />
-          <InputElements />
           <Fabs />
           <MuiCheckbox />
           <TransferListFirst />
@@ -297,13 +295,13 @@ const App = () => {
           <MuiBreadcrumbs />
           <TemporaryDrawer />
           <TextFields />
+          <Multilines />
           <BottomNav />
           <Links />
           <Menus />
           <Paginations />
           <PlaygroundSpeedDial />
           <Accordions />
-          <Multilines />
           <Autocompletes />
           <Steppers />
           <Snackbars />

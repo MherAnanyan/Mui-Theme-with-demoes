@@ -1,8 +1,8 @@
-import { TextField } from "@mui/material"
-import { Wrapper } from "../Wrapper"
+import { TextField } from '@mui/material';
+import { Wrapper } from '../Wrapper';
 
 export const Multilines = () => {
-  const sx = { m: 1, width: 220 }
+  const sx = { m: 1, width: 220 };
 
   return (
     <Wrapper title="Multiline">
@@ -88,6 +88,7 @@ export const Multilines = () => {
         color="primary2"
         label="Label"
         multiline
+        maxRows={1.5}
         size="small"
         value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -108,5 +109,5 @@ export const Multilines = () => {
         when an unknown printer took a galley"
       />
     </Wrapper>
-  )
-}
+  );
+};
