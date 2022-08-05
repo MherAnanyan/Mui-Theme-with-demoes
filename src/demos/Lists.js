@@ -75,6 +75,12 @@ export const Lists = () => {
         </ListItem>
         <Divider></Divider>
 
+        <ListItem disableGutters>
+          <ListItemButton>
+            <ListItemText primary="Disabled Gutters" />
+          </ListItemButton>
+        </ListItem>
+
         <br />
         <br />
 
