@@ -45,6 +45,9 @@ import { Chips } from './demos/Chips';
 import { Dividers } from './demos/Dividers';
 import { Icons } from './demos/Icons';
 import { MuiTabs } from './demos/MuiTabs';
+import { Tables } from './demos/Tables';
+import { Lists } from './demos/Lists';
+import { Tooltips } from './demos/Tooltips';
 
 const regular = 400,
   medium = 500,
@@ -317,6 +320,9 @@ const App = () => {
           <Icons />
           <Dividers />
           <MuiTabs />
+          <Tables />
+          <Tooltips />
+          <Lists />
         </div>
       </ThemeProvider>
     </>
