@@ -50,6 +50,8 @@ import { Timelines } from "./demos/Timelines"
 import { TreeViews } from "./demos/TreeViews"
 import { DataGrids } from "./demos/DataGrids"
 import { DataGridsPro } from "./demos/DataGridsPro"
+import { Layout } from "./demos/Layout"
+import { breakpoints } from "./theme/breakpoints"
 
 const App = () => {
   const themeFromLocalStorage = localStorage.getItem("themeMode")
@@ -68,6 +70,7 @@ const App = () => {
   const theme = createTheme({
     palette: getPalette(mode),
     typography,
+    breakpoints,
   })
 
   return (
@@ -125,6 +128,7 @@ const App = () => {
           <TreeViews />
           <DataGrids />
           <DataGridsPro />
+          <Layout />
         </div>
       </ThemeProvider>
     </>
